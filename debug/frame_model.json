@@ -1,0 +1,1496 @@
+{
+  "cache_version": 1,
+  "config": {
+    "collision_auto_method": "convex_hull",
+    "collision_format": "stl",
+    "export_collision_mesh": true,
+    "export_visual_mesh": true,
+    "frame_convention": "ros",
+    "frame_overrides_filename": "frame_overrides.csv",
+    "include_debug": true,
+    "include_docs": true,
+    "include_launch": true,
+    "include_readme": true,
+    "include_robot_data_yaml": true,
+    "include_ros2_control": true,
+    "include_rviz": true,
+    "include_screenshot": true,
+    "mesh_refinement": "medium",
+    "output_dir": "C:/EE Projects/6DOF/URDF/URDF1",
+    "override_explicit_collision": false,
+    "package_name": "6DOF_URDF_description",
+    "robot_prefix": "",
+    "ros2_control_command_interfaces": [
+      "position",
+      "velocity"
+    ],
+    "ros2_control_hardware_plugin": "mock_components/GenericSystem",
+    "ros2_control_update_rate": 100,
+    "use_xacro": false,
+    "verbosity": "verbose",
+    "visual_format": "dae",
+    "zip_name": "",
+    "zip_output": false
+  },
+  "model": {
+    "assemblies": {
+      "6DOF_URDF": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [
+          "Revolute_5",
+          "Revolute_13",
+          "Rigid_14",
+          "Rigid_25",
+          "Revolute_37",
+          "Revolute_43"
+        ],
+        "links": [
+          "base_link",
+          "Base_Motor",
+          "UA_Motor",
+          "Elbow_Connector_Passive",
+          "Roll_Housing",
+          "20mm"
+        ],
+        "name": "6DOF_URDF",
+        "parent_assembly": null
+      },
+      "Belt_Shaft": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.06941720830395406,
+          0.09872916659261978,
+          0.25219248188197296
+        ],
+        "global_rotation": [
+          0.9659258262890684,
+          0.2588190451025206,
+          2.4866384422382056e-16,
+          6.839888838926062e-18,
+          9.352365041354452e-16,
+          -1.0,
+          -0.2588190451025206,
+          0.9659258262890684,
+          9.015987995348313e-16
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Belt_Shaft",
+        "parent_assembly": null
+      },
+      "EG17_G10": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.049978304143699234,
+          0.02847916659261929,
+          0.13926592168856108
+        ],
+        "global_rotation": [
+          0.766044443118978,
+          0.642787609686539,
+          1.2246467991473554e-16,
+          1.0106403734898496e-15,
+          -1.7525707472205666e-16,
+          1.0000000000000024,
+          0.6427876096865398,
+          -0.766044443118977,
+          3.4658995624305363e-32
+        ],
+        "joints": [],
+        "links": [],
+        "name": "EG17_G10",
+        "parent_assembly": null
+      },
+      "EG17_G50": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.022087546334251255,
+          -0.09152083340738106,
+          0.06304671053092607
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "EG17_G50",
+        "parent_assembly": null
+      },
+      "GT2_400mm_Motor_Connector": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.24617456887399897,
+          0.13969007118064936,
+          0.10053589121397166
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "GT2_400mm_Motor_Connector",
+        "parent_assembly": null
+      },
+      "GT2_Elbow_Connector": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.12541189587334217,
+          0.13506772588645774,
+          0.11289675432016275
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "GT2_Elbow_Connector",
+        "parent_assembly": null
+      },
+      "Roll_Bearing_2": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.06092326392880459,
+          0.13908849350475308,
+          0.16857794588749975
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Roll_Bearing_2",
+        "parent_assembly": null
+      },
+      "Shaft_Connector": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.125893659000444,
+          0.21136340018800298,
+          0.08627207311302172
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Shaft_Connector",
+        "parent_assembly": null
+      },
+      "UA_Shaft_COupler": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.06862758617656695,
+          0.22789072433228275,
+          -0.01271261163947031
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "UA_Shaft_COupler",
+        "parent_assembly": null
+      },
+      "UA_Shaft_Coupler": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          -0.16124210377896872,
+          0.183647083239548,
+          0.06614481898028501
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "UA_Shaft_Coupler",
+        "parent_assembly": null
+      }
+    },
+    "closing_joints": {
+      "Rigid_14": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Base_Motor",
+        "closing_source": "auto_detected",
+        "fusion_source": "regular",
+        "is_closing": true,
+        "is_mount": false,
+        "is_passive": true,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Rigid_14",
+        "origin_global": [
+          -0.02884999999999997,
+          -0.026499999999999954,
+          0.006999999999999999
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          1.5707963267948966,
+          1.2246467991473517e-16,
+          2.4434609527920608
+        ],
+        "origin_xyz": [
+          0.023242646566430034,
+          -0.09059812724087132,
+          -0.1533999999999996
+        ],
+        "parent_link": "UA_Motor"
+      }
+    },
+    "errors": [],
+    "joints": {
+      "Revolute_13": {
+        "axis": [
+          -3.388131789017203e-21,
+          -3.258219373146208e-46,
+          -1.0
+        ],
+        "child_link": "UA_Motor",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "revolute",
+        "limits": {
+          "effort": 100.0,
+          "lower": 0.0,
+          "upper": 6.283185307179586,
+          "velocity": 1.0
+        },
+        "name": "Revolute_13",
+        "origin_global": [
+          0.027190253896828775,
+          -0.036170833407380726,
+          0.012937893299369105
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          1.5707963267948966,
+          -0.6981317007977325,
+          -3.141592653589793
+        ],
+        "origin_xyz": [
+          0.07604025389682874,
+          0.1533999999999997,
+          0.055062106700630886
+        ],
+        "parent_link": "Base_Motor"
+      },
+      "Revolute_37": {
+        "axis": [
+          -1.0,
+          1.9428902930940244e-16,
+          -6.050030208176464e-17
+        ],
+        "child_link": "Roll_Housing",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "revolute",
+        "limits": {
+          "effort": 100.0,
+          "lower": 0.0,
+          "upper": 6.283185307179586,
+          "velocity": 1.0
+        },
+        "name": "Revolute_37",
+        "origin_global": [
+          0.019587504701922845,
+          -0.20378041974675842,
+          0.22286073660972142
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          -3.1415926535897922,
+          -4.6640571165634186e-17,
+          -2.1816615649929116
+        ],
+        "origin_xyz": [
+          0.10661176172046033,
+          0.07960649402138253,
+          -0.18650958633937828
+        ],
+        "parent_link": "Elbow_Connector_Passive"
+      },
+      "Revolute_43": {
+        "axis": [
+          1.0,
+          5.69028660815256e-18,
+          4.550296095510969e-17
+        ],
+        "child_link": "20mm",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "revolute",
+        "limits": {
+          "effort": 100.0,
+          "lower": 0.0,
+          "upper": 6.283185307179586,
+          "velocity": 1.0
+        },
+        "name": "Revolute_43",
+        "origin_global": [
+          0.24956967503181038,
+          0.11064637489657406,
+          0.4212805044154575
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          2.1816615649929125,
+          1.5707963267948966,
+          0.0
+        ],
+        "origin_xyz": [
+          -0.17079090307470535,
+          -0.2511825438852278,
+          -0.31442679464333223
+        ],
+        "parent_link": "Roll_Housing"
+      },
+      "Revolute_5": {
+        "axis": [
+          -1.2246465878873716e-16,
+          0.0,
+          -1.0
+        ],
+        "child_link": "Base_Motor",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "revolute",
+        "limits": {
+          "effort": 100.0,
+          "lower": 0.0,
+          "upper": 6.283185307179586,
+          "velocity": 1.0
+        },
+        "name": "Revolute_5",
+        "origin_global": [
+          -0.04884999999999996,
+          0.11722916659261896,
+          0.06799999999999999
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          3.141592653589793,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          -0.04884999999999996,
+          0.11722916659261896,
+          0.06799999999999999
+        ],
+        "parent_link": "base_link"
+      },
+      "Rigid_25": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Elbow_Connector_Passive",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "Rigid_25",
+        "origin_global": [
+          -0.21110938571616839,
+          0.1980432961028399,
+          0.15574743034269223
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          3.141592653589793,
+          5.453092835387184e-32,
+          3.141592653589793
+        ],
+        "origin_xyz": [
+          -0.022499997176418138,
+          -0.24530367460505365,
+          -0.018900000000000517
+        ],
+        "parent_link": "UA_Motor"
+      }
+    },
+    "links": {
+      "20mm": {
+        "area_m2": 0.056185849658072204,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.027499999999999948,
+          0.027500000000000024,
+          0.07699999999999993
+        ],
+        "bbox_min": [
+          -0.027499999999999976,
+          -0.039149999999999935,
+          -0.014499999999999904
+        ],
+        "bbox_size": [
+          0.054999999999999924,
+          0.06664999999999996,
+          0.09149999999999983
+        ],
+        "body_count": 1,
+        "clean_name": "20mm",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/20mm_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              -1.3877787807814457e-17,
+              -0.005824999999999955,
+              0.031250000000000014
+            ],
+            "shape": "box",
+            "size": [
+              0.054999999999999924,
+              0.06664999999999996,
+              0.09149999999999983
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.027499999999999948,
+          0.027500000000000024,
+          0.07699999999999993
+        ],
+        "collision_bbox_min": [
+          -0.027499999999999976,
+          -0.039149999999999935,
+          -0.014499999999999904
+        ],
+        "collision_bbox_size": [
+          0.054999999999999924,
+          0.06664999999999996,
+          0.09149999999999983
+        ],
+        "collision_body_count": 5,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0001525992217543952,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          9.521021154023346e-09,
+          0.00020021264989340676,
+          0.031160542984509213
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.06520396386679975,
+          0.041229166592619756,
+          0.2486571500286972
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0002324442629346504,
+          "ixy": 1.5153371001935543e-10,
+          "ixz": 8.53451893939359e-11,
+          "iyy": 0.00023323229503501833,
+          "iyz": 1.6299059620936313e-06,
+          "izz": 0.00011766370434511758
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.3187151338750712,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Roll Bearing 2:7+HR32906J Inner ring:1",
+          "Roll Bearing 2:7+HR32906J Outer ring:1",
+          "20mm:1",
+          "Gripper Shaft:1",
+          "Motor Housing Yaw:1"
+        ],
+        "mesh_bake_offset": [
+          -0.06941720830395418,
+          -0.013729166592619788,
+          -0.25219248188197274
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/20mm_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/20mm.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "20mm:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 52",
+        "source_world_rotation": [
+          5.0312610477553925e-17,
+          -0.6427876096865385,
+          0.7660444431189773,
+          1.0000000000000002,
+          7.225596910173346e-16,
+          5.384168097970474e-16,
+          -9.103975737675778e-16,
+          0.7660444431189773,
+          0.6427876096865385
+        ],
+        "urdf_name": "20mm",
+        "volume_m3": 0.0001525992217543952,
+        "wants_accurate_collision": false
+      },
+      "Base_Motor": {
+        "area_m2": 0.24211174411982972,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.12884999999999994,
+          0.28400000000000003,
+          0.1189
+        ],
+        "bbox_min": [
+          -0.03115000000000004,
+          -0.039150000000000004,
+          -0.032150000000000026
+        ],
+        "bbox_size": [
+          0.15999999999999998,
+          0.32315000000000005,
+          0.15105000000000002
+        ],
+        "body_count": 1,
+        "clean_name": "Base_Motor",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/Base_Motor_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.00025860788503011956,
+              0.9571666715099011,
+              -0.28953738285861996,
+              -0.9999954903258738,
+              0.001113844326822747,
+              0.0027890282771762037,
+              0.00299206448411192,
+              0.28953535587467183,
+              0.9571626430490536
+            ],
+            "origin_rpy": [
+              0.29374271943540786,
+              -0.002992068948514459,
+              -1.570537717749389
+            ],
+            "origin_xyz": [
+              0.06886072484474813,
+              0.18002873402791883,
+              0.007124085261610321
+            ],
+            "shape": "box",
+            "size": [
+              0.08807732759086023,
+              0.050033723683034916,
+              0.050041999205536494
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.12884999999999994,
+          0.28400000000000003,
+          0.1189
+        ],
+        "collision_bbox_min": [
+          -0.03115000000000004,
+          -0.039150000000000004,
+          -0.032150000000000026
+        ],
+        "collision_bbox_size": [
+          0.15999999999999998,
+          0.32315000000000005,
+          0.15105000000000002
+        ],
+        "collision_body_count": 23,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0012425217114062502,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.04969679893427319,
+          0.10875998611202162,
+          0.02038718915137232
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.04884999999999996,
+          0.11722916659261896,
+          0.0674
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.026799760497111455,
+          "ixy": -0.0038613486229138205,
+          "ixz": 0.000560042612098126,
+          "iyy": 0.0037908627997440647,
+          "iyz": 0.001696564053418137,
+          "izz": 0.02827367340181174
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 2.0988419113058425,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "EG17-G50:1+EG17 shaft-2:1",
+          "EG17-G50:1+nema17input flange:1",
+          "EG17-G50:1+input shaft:1",
+          "EG17-G50:1+\u00a6\u00b510circlip:1",
+          "EG17-G50:1+M3hexagon socket head cap screw:1",
+          "EG17-G50:1+6801:1",
+          "EG17-G50:1+M3hexagon socket head cap screw:2",
+          "EG17-G50:1+M3hexagon socket head cap screw:3",
+          "EG17-G50:1+M3hexagon socket head cap screw:4",
+          "EG17-G50:1+M3hexagon socket head cap screw:5",
+          "EG17-G50:1+M3hexagon socket head cap screw:6",
+          "EG17-G50:1+M3hexagon socket head cap screw:7",
+          "EG17-G50:1+M3hexagon socket head cap screw:8",
+          "Base Motor:1",
+          "Shoulder Motor:1",
+          "Shoulder Cap:2",
+          "Shoulder Bearing 2 Lower:3",
+          "Shoulder Bearing 2 Upper:3",
+          "Shoulder Bearing 2 Lower:2",
+          "Shoulder Bearing 2 Upper:2",
+          "Bearing Housing Shoulder V2:1",
+          "Motor Connector Shoulder:1",
+          "Base Connector + Shaft V2:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0005999999999999894
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/Base_Motor_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/Base_Motor.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "Base Motor:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 48",
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "urdf_name": "Base_Motor",
+        "volume_m3": 0.0012425217114062502,
+        "wants_accurate_collision": false
+      },
+      "Elbow_Connector_Passive": {
+        "area_m2": 0.19410851525142342,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.11570548584389792,
+          0.08372133200307455,
+          0.11699999999999487
+        ],
+        "bbox_min": [
+          -0.11118543007562444,
+          -0.09543461874137645,
+          -0.005000000000000001
+        ],
+        "bbox_size": [
+          0.22689091591952237,
+          0.179155950744451,
+          0.12199999999999488
+        ],
+        "body_count": 2,
+        "clean_name": "Elbow_Connector_Passive",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/Elbow_Connector_Passive_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.7182033747611549,
+              0.695737671287292,
+              -0.011532789490151659,
+              -0.6957938938764159,
+              -0.7178878300750637,
+              0.02253709551853581,
+              0.007400657131847894,
+              0.024210662565336546,
+              0.999679485681368
+            ],
+            "origin_rpy": [
+              0.024213691621670863,
+              -0.007400724688840143,
+              -2.3720414833044767
+            ],
+            "origin_xyz": [
+              -0.006350644017749364,
+              0.0096039244564852,
+              0.058073273396487414
+            ],
+            "shape": "box",
+            "size": [
+              0.054801245148747985,
+              0.05882200787200256,
+              0.03868140993328861
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.11570548584389792,
+          0.08372133200307455,
+          0.11699999999999487
+        ],
+        "collision_bbox_min": [
+          -0.11118543007562444,
+          -0.09543461874137645,
+          -0.005000000000000001
+        ],
+        "collision_bbox_size": [
+          0.22689091591952237,
+          0.179155950744451,
+          0.12199999999999488
+        ],
+        "collision_body_count": 10,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0007787533282454619,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -0.01924540571477627,
+          0.011518063805640128,
+          0.06261744629713775
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.11325191094269059,
+          -0.017270833407380125,
+          0.21531412951022003
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.004864071138163326,
+          "ixy": 0.0034448102984157604,
+          "ixz": 0.0003038557375004421,
+          "iyy": 0.008503665310028122,
+          "iyz": -0.00013584722835962012,
+          "izz": 0.009997296168913601
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 3.223631056408993,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Elbow Motor:1",
+          "Elbow Belt Sensorless:1",
+          "Elbow Connector Passive:1",
+          "Roll Bearing 2:3+HR32906J Inner ring:1",
+          "Roll Bearing 2:3+HR32906J Outer ring:1",
+          "Roll Bearing 2:4+HR32906J Inner ring:1",
+          "Roll Bearing 2:4+HR32906J Outer ring:1",
+          "Shaft Connector:1+Component58:1",
+          "Elbow Cap:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/Elbow_Connector_Passive_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/Elbow_Connector_Passive.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Elbow Connector Passive:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 50",
+        "source_world_rotation": [
+          0.7660444431189779,
+          0.6427876096865397,
+          1.224646799147352e-16,
+          -9.38133875270272e-17,
+          -7.871877887341983e-17,
+          1.0,
+          0.6427876096865397,
+          -0.7660444431189779,
+          -4.931459985520968e-34
+        ],
+        "urdf_name": "Elbow_Connector_Passive",
+        "volume_m3": 0.0007787533282454619,
+        "wants_accurate_collision": false
+      },
+      "Roll_Housing": {
+        "area_m2": 0.10973030650695074,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.033000000000000036,
+          0.026210790894703385,
+          0.08900000000000001
+        ],
+        "bbox_min": [
+          -0.13100000000000012,
+          -0.03915000000000003,
+          -0.02400000000000569
+        ],
+        "bbox_size": [
+          0.16400000000000015,
+          0.06536079089470342,
+          0.11300000000000571
+        ],
+        "body_count": 1,
+        "clean_name": "Roll_Housing",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/Roll_Housing_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.007400656837282969,
+              -0.024210660175355482,
+              -0.9996794857414302,
+              -0.18922678724707365,
+              0.9816784777643905,
+              -0.022373852648569784,
+              0.981905521558224,
+              0.18900055615807762,
+              -0.011846370980593764
+            ],
+            "origin_rpy": [
+              1.6333934652939026,
+              -1.380274350926685,
+              -1.6098863894558237
+            ],
+            "origin_xyz": [
+              0.0004267265214880654,
+              -0.005710730423501657,
+              0.022775506437220393
+            ],
+            "shape": "box",
+            "size": [
+              0.05480123571069483,
+              0.05882200530384751,
+              0.03868140989028001
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.033000000000000036,
+          0.026210790894703385,
+          0.08900000000000001
+        ],
+        "collision_bbox_min": [
+          -0.13100000000000012,
+          -0.03915000000000003,
+          -0.02400000000000569
+        ],
+        "collision_bbox_size": [
+          0.16400000000000015,
+          0.06536079089470342,
+          0.11300000000000571
+        ],
+        "collision_body_count": 8,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0003570490557852299,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          -0.036918347008649356,
+          7.49260854053297e-05,
+          0.030212703805797148
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.015584264409484056,
+          0.0797291665926198,
+          0.27496855785099494
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.000808031258644192,
+          "ixy": -2.147042682870189e-06,
+          "ixz": 0.0002028960662402057,
+          "iyy": 0.0022926959259902953,
+          "iyz": -1.3233939248331406e-06,
+          "izz": 0.0017535818020471597
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.7776476084064623,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "Roll Housing:1",
+          "Passive Cap:1",
+          "Motor Housing Roll:1",
+          "Roll Bearing 2:5+HR32906J Inner ring:1",
+          "Roll Bearing 2:5+HR32906J Outer ring:1",
+          "Roll Bearing 2:6+HR32906J Inner ring:1",
+          "Roll Bearing 2:6+HR32906J Outer ring:1",
+          "Belt Shaft:1+Component64:1"
+        ],
+        "mesh_bake_offset": [
+          0.047459816677023356,
+          -0.04122916659261981,
+          -0.2835095863393782
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/Roll_Housing_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/Roll_Housing.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "Roll Housing:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 51",
+        "source_world_rotation": [
+          -0.9659258262890684,
+          -0.2588190451025207,
+          9.464490080754261e-17,
+          1.6493236830350107e-16,
+          -9.812663731075366e-16,
+          -1.0,
+          0.2588190451025207,
+          -0.9659258262890684,
+          9.905216779765214e-16
+        ],
+        "urdf_name": "Roll_Housing",
+        "volume_m3": 0.0003570490557852299,
+        "wants_accurate_collision": false
+      },
+      "UA_Motor": {
+        "area_m2": 0.19541873563143836,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.12628460879709047,
+          0.13274927738049874,
+          0.054500000000000215
+        ],
+        "bbox_min": [
+          -0.03507698579479731,
+          -0.13415149663081366,
+          -0.21166155773966341
+        ],
+        "bbox_size": [
+          0.16136159459188779,
+          0.2669007740113124,
+          0.26616155773966366
+        ],
+        "body_count": 1,
+        "clean_name": "UA_Motor",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/UA_Motor_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.020335391322995694,
+              0.9997893595057717,
+              -0.002776414734777723,
+              0.8640987645266727,
+              0.018972221138393825,
+              0.5029645911677619,
+              0.5029113212120192,
+              0.007828885240871905,
+              -0.8643025578769663
+            ],
+            "origin_rpy": [
+              3.1325348635079004,
+              -0.5269637548095618,
+              1.5943256260744596
+            ],
+            "origin_xyz": [
+              -0.0031331551079929504,
+              0.010141389795397927,
+              -0.03124465646637819
+            ],
+            "shape": "cylinder",
+            "size": [
+              0.08651187581909663,
+              0.0,
+              0.2657781829135426
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.03257698861837909,
+          0.13274927738049874,
+          0.054500000000000215
+        ],
+        "collision_bbox_min": [
+          -0.03507698579479731,
+          -0.13415149663081366,
+          -0.11950000000000066
+        ],
+        "collision_bbox_size": [
+          0.0676539744131764,
+          0.2669007740113124,
+          0.17400000000000088
+        ],
+        "collision_body_count": 23,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0008611809999786677,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          -0.0013506006538446006,
+          -0.009204909471427197,
+          -0.011399226742798769
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.04987618467709967,
+          0.02422916659261926,
+          0.13589657487549744
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0076569802888129005,
+          "ixy": 3.0194002160333316e-05,
+          "ixz": -1.7221019767425157e-05,
+          "iyy": 0.0027171704802527517,
+          "iyz": -0.0001792720756480987,
+          "izz": 0.005396456025288192
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 1.3156827720878554,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "UA Shaft COupler:1+92605A009:1",
+          "UA Shaft COupler:1+Connector:1",
+          "UA Shaft COupler:1+92605A009:2",
+          "Upper arm:1",
+          "EG17-G10:1+EG17 shaft:1",
+          "EG17-G10:1+nema17input flange (1):1",
+          "EG17-G10:1+input shaft (1):1",
+          "EG17-G10:1+\u00a6\u00b510circlip (1):1",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):1",
+          "EG17-G10:1+6801 (1):1",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):2",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):3",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):4",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):5",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):6",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):7",
+          "EG17-G10:1+M3hexagon socket head cap screw (1):8",
+          "UA Motor:1",
+          "Roll Bearing 2:2+HR32906J Inner ring:1",
+          "Roll Bearing 2:2+HR32906J Outer ring:1",
+          "Roll Bearing 2:1+HR32906J Inner ring:1",
+          "Roll Bearing 2:1+HR32906J Outer ring:1",
+          "UA Shaft Coupler:1+92605A009 (1):1",
+          "UA Shaft Coupler:1+Connector (1):1",
+          "UA Shaft Coupler:1+92605A009 (1):2",
+          "GT2 Elbow Connector:1+Component52:1",
+          "GT2 400mm Motor Connector:1+Component54:1"
+        ],
+        "mesh_bake_offset": [
+          -0.019999999999999997,
+          -0.14372916659261897,
+          -0.06039999999999995
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/UA_Motor_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/UA_Motor.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "UA Motor:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 49",
+        "source_world_rotation": [
+          -0.7660444431189777,
+          0.6427876096865398,
+          -1.2246467991473517e-16,
+          9.380999939523816e-17,
+          -7.871877887341984e-17,
+          -0.9999999999999996,
+          -0.6427876096865398,
+          -0.7660444431189777,
+          -4.6483511218092643e-32
+        ],
+        "urdf_name": "UA_Motor",
+        "volume_m3": 0.0008611809999786677,
+        "wants_accurate_collision": false
+      },
+      "base_link": {
+        "area_m2": 0.14132131435476075,
+        "assembly": "6DOF_URDF",
+        "bbox_max": [
+          0.0875,
+          0.08749999999999998,
+          0.005
+        ],
+        "bbox_min": [
+          -0.0875,
+          -0.08750000000000002,
+          -0.071
+        ],
+        "bbox_size": [
+          0.175,
+          0.175,
+          0.076
+        ],
+        "body_count": 1,
+        "clean_name": "Base_1",
+        "collision": {
+          "mesh_path": "meshes/6DOF_URDF/base_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.0,
+              -2.0816681711721685e-17,
+              -0.032999999999999995
+            ],
+            "shape": "cylinder",
+            "size": [
+              0.0875,
+              0.0,
+              0.076
+            ]
+          },
+          "source": "convex_hull"
+        },
+        "collision_bbox_max": [
+          0.0875,
+          0.08749999999999998,
+          0.005
+        ],
+        "collision_bbox_min": [
+          -0.0875,
+          -0.08750000000000002,
+          -0.071
+        ],
+        "collision_bbox_size": [
+          0.175,
+          0.175,
+          0.076
+        ],
+        "collision_body_count": 6,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0010792514044851594,
+        "color_rgb": [
+          0.09803921568627451,
+          0.09803921568627451,
+          0.09803921568627451
+        ],
+        "com_link_local": [
+          -3.1056103165184155e-12,
+          2.573199252019244e-13,
+          -0.031603819809572595
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.00086709317819063,
+          "ixy": 4.190534403798298e-15,
+          "ixz": -4.591054583406321e-14,
+          "iyy": 0.0008670932046070735,
+          "iyz": -1.577246629261226e-14,
+          "izz": 0.001232945064112609
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.601590065243109,
+        "material_name": "PETG_15_Gyroid",
+        "merged_member_paths": [
+          "Base (1):1",
+          "Shoulder Bearing 2 Upper:1",
+          "Shoulder Bearing 2 Lower:1",
+          "Lower Upper Base Bearing Ring:1",
+          "Lower Bottom Base Bearing Ring:1",
+          "Shoulder Cap:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/6DOF_URDF/base_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/6DOF_URDF/base_link.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "Base (1):1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 47",
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "base_link",
+        "volume_m3": 0.0010792514044851594,
+        "wants_accurate_collision": false
+      }
+    },
+    "name": "6DOF_URDF",
+    "root_link": "base_link",
+    "warnings": [
+      "Joint 'Revolute_29' is internal to a rigid group (both endpoints \u2192 6DOF_URDF/Elbow_Connector_Passive).  Dropped \u2014 rigid groups represent one rigid body, joints between members are ignored.  Move this joint to assemble between rigid groups instead.",
+      "Joint 'Revolute_46' is internal to a rigid group (both endpoints \u2192 6DOF_URDF/20mm).  Dropped \u2014 rigid groups represent one rigid body, joints between members are ignored.  Move this joint to assemble between rigid groups instead.",
+      "Multi-parent link detected (child=Base Motor:1): keeping 'Revolute_5' as the URDF tree parent; routing ['Rigid_14'] to ``closing_joints`` (sidecar) \u2014 closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.",
+      "Root link renamed: 'Base_1' \u2192 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion."
+    ]
+  }
+}

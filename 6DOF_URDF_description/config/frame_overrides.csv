@@ -1,0 +1,7 @@
+link,parent_joint,joint_type,rule,original_roll_deg,original_pitch_deg,original_yaw_deg,post_roll_deg,post_pitch_deg,post_yaw_deg,role
+20mm,Revolute_43,revolute,auto,50.000000,0.000000,90.000000,-90.000000,0.000000,0.000000,revolute_axis_z
+Base_Motor,Revolute_5,revolute,auto,180.000000,0.000000,0.000000,0.000000,0.000000,0.000000,revolute_axis_z
+Elbow_Connector_Passive,Rigid_25,fixed,keep,-90.000000,-40.000000,0.000000,-90.000000,-40.000000,0.000000,unchanged
+Roll_Housing,Revolute_37,revolute,auto,-90.000000,-15.000000,180.000000,180.000000,-75.000000,0.000000,revolute_axis_z
+UA_Motor,Revolute_13,revolute,auto,-90.000000,40.000000,180.000000,-90.000000,0.000000,0.000000,revolute_axis_z
+base_link,,root,auto,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,root_x_forward_z_up
