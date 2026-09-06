@@ -6,9 +6,9 @@
 
 | Property | Value |
 |----------|-------|
-| Total mass | 8.336 kg |
-| Links | 6 |
-| Joints | 5 (4 movable) |
+| Total mass | 5.614 kg |
+| Links | 7 |
+| Joints | 6 (6 movable) |
 | Assemblies | 10 |
 | Root link | `base_link` |
 
@@ -26,44 +26,48 @@
 ```
 base_link
   └─ Revolute_5 [revolute]
-    Base_Motor [BAKE]
+    Shoulder [BAKE]
       └─ Revolute_13 [revolute]
-        UA_Motor [BAKE]
-          └─ Rigid_25 [fixed]
-            Elbow_Connector_Passive
+        UA [BAKE]
+          └─ Revolute_29 [revolute]
+            Elbow [BAKE]
               └─ Revolute_37 [revolute]
-                Roll_Housing [BAKE]
+                Roll [BAKE]
                   └─ Revolute_43 [revolute]
-                    20mm [BAKE]
+                    Yaw [BAKE]
+                      └─ Revolute_46 [continuous]
+                        Gripper [BAKE]
 ```
 
 ## Link Properties
 
 | Link | Mass (kg) | Material | Collision | Bodies |
 |------|-----------|----------|-----------|--------|
-| `20mm` | 0.3187 | Steel | convex_hull | 1 |
-| `Base_Motor` | 2.0988 | Steel | convex_hull | 1 |
-| `Elbow_Connector_Passive` | 3.2236 | Steel | convex_hull | 2 |
-| `Roll_Housing` | 0.7776 | Steel | convex_hull | 1 |
-| `UA_Motor` | 1.3157 | Steel | convex_hull | 1 |
-| `base_link` | 0.6016 | PETG_15_Gyroid | convex_hull | 1 |
+| `Elbow` | 0.7335 | — | convex_hull | 0 |
+| `Gripper` | 0.0112 | — | convex_hull | 0 |
+| `Roll` | 0.6824 | — | convex_hull | 0 |
+| `Shoulder` | 2.0941 | — | convex_hull | 0 |
+| `UA` | 1.2363 | — | convex_hull | 0 |
+| `Yaw` | 0.2598 | — | convex_hull | 0 |
+| `base_link` | 0.5967 | PETG_15_Gyroid | convex_hull | 1 |
 
 ## Joint Properties
 
 | Joint | Type | Parent → Child | Axis | Limits |
 |-------|------|---------------|------|--------|
-| `Revolute_13` | revolute | `Base_Motor` → `UA_Motor` | (0,0,1) | [0.0°, 360.0°] |
-| `Revolute_37` | revolute | `Elbow_Connector_Passive` → `Roll_Housing` | (0,0,1) | [0.0°, 360.0°] |
-| `Revolute_43` | revolute | `Roll_Housing` → `20mm` | (0,0,1) | [0.0°, 360.0°] |
-| `Revolute_5` | revolute | `base_link` → `Base_Motor` | (0,0,1) | [0.0°, 360.0°] |
-| `Rigid_25` | fixed | `UA_Motor` → `Elbow_Connector_Passive` | (0,0,1) | — |
+| `Revolute_13` | revolute | `Shoulder` → `UA` | (0,0,1) | [0.0°, 360.0°] |
+| `Revolute_29` | revolute | `UA` → `Elbow` | (0,0,1) | [0.0°, 360.0°] |
+| `Revolute_37` | revolute | `Elbow` → `Roll` | (0,0,1) | [0.0°, 360.0°] |
+| `Revolute_43` | revolute | `Roll` → `Yaw` | (0,0,1) | [0.0°, 360.0°] |
+| `Revolute_46` | continuous | `Yaw` → `Gripper` | (0,0,1) | — |
+| `Revolute_5` | revolute | `base_link` → `Shoulder` | (0,0,1) | [0.0°, 360.0°] |
 
 ## Assembly Breakdown
 
 ### 6DOF_URDF
 
-- **Links**: base_link, Base_Motor, UA_Motor, Elbow_Connector_Passive, Roll_Housing, 20mm
-- **Total mass**: 8.336 kg
+- **Links**: base_link, UA, Elbow, Roll, Yaw, Gripper, Shoulder
+- **Total mass**: 5.614 kg
 
 ### Belt_Shaft
 

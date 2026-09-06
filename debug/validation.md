@@ -6,8 +6,8 @@
 
 | Metric | Value |
 |--------|-------|
-| Links | 6 |
-| Joints | 5 |
+| Links | 7 |
+| Joints | 6 |
 | Assemblies | 10 |
 | Root | `base_link` |
 | Errors | 0 |
@@ -15,36 +15,39 @@
 
 ## Warnings
 
-- Joint 'Revolute_29' is internal to a rigid group (both endpoints → 6DOF_URDF/Elbow_Connector_Passive).  Dropped — rigid groups represent one rigid body, joints between members are ignored.  Move this joint to assemble between rigid groups instead.
-- Joint 'Revolute_46' is internal to a rigid group (both endpoints → 6DOF_URDF/20mm).  Dropped — rigid groups represent one rigid body, joints between members are ignored.  Move this joint to assemble between rigid groups instead.
-- Multi-parent link detected (child=Base Motor:1): keeping 'Revolute_5' as the URDF tree parent; routing ['Rigid_14'] to ``closing_joints`` (sidecar) — closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.
-- Root link renamed: 'Base_1' → 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion.
+- Multi-parent link detected (child=!frame_elbow:1): keeping 'Revolute_29' as the URDF tree parent; routing ['Rigid_55'] to ``closing_joints`` (sidecar) — closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.
+- Multi-parent link detected (child=!frame_roll:1): keeping 'Revolute_37' as the URDF tree parent; routing ['Rigid_56'] to ``closing_joints`` (sidecar) — closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.
+- Multi-parent link detected (child=!frame_yaw:1): keeping 'Revolute_43' as the URDF tree parent; routing ['Rigid_57'] to ``closing_joints`` (sidecar) — closed kinematic loop.  Tag the loop-closing joint(s) with prefix ``!closing_*`` in Fusion to make the choice explicit and avoid this warning.
+- Root link renamed: 'Base' → 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion.
 
 ## Kinematic Tree
 
 ```
 base_link [convex_hull]
   └─ Revolute_5 [revolute]
-    Base_Motor [BAKE] [convex_hull]
+    Shoulder [BAKE] [convex_hull]
       └─ Revolute_13 [revolute]
-        UA_Motor [BAKE] [convex_hull]
-          └─ Rigid_25 [fixed]
-            Elbow_Connector_Passive [convex_hull]
+        UA [BAKE] [convex_hull]
+          └─ Revolute_29 [revolute]
+            Elbow [BAKE] [convex_hull]
               └─ Revolute_37 [revolute]
-                Roll_Housing [BAKE] [convex_hull]
+                Roll [BAKE] [convex_hull]
                   └─ Revolute_43 [revolute]
-                    20mm [BAKE] [convex_hull]
+                    Yaw [BAKE] [convex_hull]
+                      └─ Revolute_46 [continuous]
+                        Gripper [BAKE] [convex_hull]
 ```
 
 ## Collision Geometry
 
 | Link | Source | Shape/File |
 |------|--------|------------|
-| `20mm` | convex hull STL | `meshes/6DOF_URDF/20mm_collision.stl` |
-| `Base_Motor` | convex hull STL | `meshes/6DOF_URDF/Base_Motor_collision.stl` |
-| `Elbow_Connector_Passive` | convex hull STL | `meshes/6DOF_URDF/Elbow_Connector_Passive_collision.stl` |
-| `Roll_Housing` | convex hull STL | `meshes/6DOF_URDF/Roll_Housing_collision.stl` |
-| `UA_Motor` | convex hull STL | `meshes/6DOF_URDF/UA_Motor_collision.stl` |
+| `Elbow` | convex hull STL | `meshes/6DOF_URDF/Elbow_collision.stl` |
+| `Gripper` | convex hull STL | `meshes/6DOF_URDF/Gripper_collision.stl` |
+| `Roll` | convex hull STL | `meshes/6DOF_URDF/Roll_collision.stl` |
+| `Shoulder` | convex hull STL | `meshes/6DOF_URDF/Shoulder_collision.stl` |
+| `UA` | convex hull STL | `meshes/6DOF_URDF/UA_collision.stl` |
+| `Yaw` | convex hull STL | `meshes/6DOF_URDF/Yaw_collision.stl` |
 | `base_link` | convex hull STL | `meshes/6DOF_URDF/base_link_collision.stl` |
 
 ## Mesh Bake Offsets
@@ -53,7 +56,9 @@ Links where joint frame ≠ component origin. Visual/inertial/collision origins 
 
 | Link | Offset (mm) |
 |------|-------------|
-| `Base_Motor` | (0.0, 0.0, -0.6) |
-| `UA_Motor` | (-77.1, -123.0, 60.4) |
-| `Roll_Housing` | (41.2, -283.5, -47.5) |
-| `20mm` | (-184.4, 172.6, -69.4) |
+| `UA` | (0.0, 0.0, 0.0) |
+| `Elbow` | (0.0, 0.0, 0.0) |
+| `Roll` | (0.0, 0.0, 0.0) |
+| `Yaw` | (0.0, 0.0, 0.0) |
+| `Gripper` | (0.0, 0.0, 0.0) |
+| `Shoulder` | (0.0, 0.0, 0.0) |

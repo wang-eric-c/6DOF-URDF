@@ -5,9 +5,6 @@
   <material name="PETG_15_Gyroid">
     <color rgba="0.098 0.098 0.098 1.0"/>
   </material>
-  <material name="Steel">
-    <color rgba="1.000 1.000 1.000 1.0"/>
-  </material>
 
   <!-- Assembly includes -->
   <xacro:include filename="$(find 6DOF_URDF_description)/urdf/assemblies/6DOF_URDF.urdf.xacro"/>

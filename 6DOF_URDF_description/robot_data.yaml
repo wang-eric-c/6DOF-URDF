@@ -5,15 +5,15 @@ metadata:
   design_name: 6DOF_URDF
   package_name: 6DOF_URDF_description
   exporter_version: '3.1.0'
-  total_mass_kg: 8.3361
-  link_count: 6
-  joint_count: 5
+  total_mass_kg: 5.6140
+  link_count: 7
+  joint_count: 6
   root_link: base_link
 
 assemblies:
   6DOF_URDF:
-    links: [base_link, Base_Motor, UA_Motor, Elbow_Connector_Passive, Roll_Housing, 20mm]
-    total_mass_kg: 8.3361
+    links: [base_link, UA, Elbow, Roll, Yaw, Gripper, Shoulder]
+    total_mass_kg: 5.6140
   Belt_Shaft:
     links: []
     total_mass_kg: 0.0000
@@ -43,140 +43,157 @@ assemblies:
     total_mass_kg: 0.0000
 
 links:
-  20mm:
+  Elbow:
     assembly: 6DOF_URDF
-    mass_kg: 0.318715
-    volume_m3: 0.00015260
-    bbox_size_m: [0.055000, 0.066650, 0.091500]
-    com_local_m: [-0.160624, 0.152440, -0.069417]
+    mass_kg: 0.733476
+    volume_m3: 0.00050401
+    bbox_size_m: [0.168649, 0.148699, 0.105000]
+    com_local_m: [-0.015531, 0.020790, -0.069395]
     inertia_at_com:
-      ixx: 1.638087e-04
-      ixy: 5.662339e-05
-      ixz: -3.202578e-11
-      iyy: 1.870873e-04
-      iyz: -1.709404e-10
-      izz: 2.324443e-04
-    material: 'Steel'
-    color_rgba: [1.000, 1.000, 1.000, 1.0]
-    body_count: 1
+      ixx: 1.328959e-03
+      ixy: 4.778990e-04
+      ixz: -2.397529e-05
+      iyy: 7.168999e-04
+      iyz: 3.209492e-05
+      izz: 1.533380e-03
+    body_count: 0
     is_empty: false
     collision_source: convex_hull
-    bake_offset_m: [-0.184366, 0.172623, -0.069417]
-    mesh_origin_rpy_rad: [2.443461, -1.570796, 0.000000]
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [0.000000, 0.000000, -0.698132]
     frame_rule: auto
-    frame_rebase_rpy_rad: [-1.570796, -0.872665, -1.570796]
-    rigid_group: Rigid Group 52
+    frame_rebase_rpy_rad: [0.000000, 0.000000, 0.698132]
+    rigid_group: Elbow
     is_merged: true
-    merged_from: [HR32906J, HR32906J, 20mm:1, Gripper, Motor]
-  Base_Motor:
+    merged_from: [Elbow, Elbow, HR32906J, HR32906J, HR32906J, HR32906J, frame_elbow:1, Component52:1, Component58:1, Elbow]
+  Gripper:
     assembly: 6DOF_URDF
-    mass_kg: 2.098842
-    volume_m3: 0.00124252
-    bbox_size_m: [0.160000, 0.323150, 0.151050]
-    com_local_m: [0.049697, -0.108760, -0.020987]
+    mass_kg: 0.011203
+    volume_m3: 0.00003020
+    bbox_size_m: [0.040000, 0.040000, 0.034000]
+    com_local_m: [0.000000, 0.000000, -0.014692]
     inertia_at_com:
-      ixx: 2.679976e-02
-      ixy: 3.861349e-03
-      ixz: -5.600426e-04
-      iyy: 3.790863e-03
-      iyz: 1.696564e-03
-      izz: 2.827367e-02
-    material: 'Steel'
-    color_rgba: [1.000, 1.000, 1.000, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: convex_hull
-    bake_offset_m: [0.000000, 0.000000, -0.000600]
-    mesh_origin_rpy_rad: [3.141593, 0.000000, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [3.141593, 0.000000, 0.000000]
-    rigid_group: Rigid Group 48
-    is_merged: true
-    merged_from: [EG17, nema17input, input, ¦µ10circlip:1, M3hexagon, 6801:1, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, Base, Shoulder, Shoulder, Shoulder, Shoulder, Shoulder, Shoulder, Bearing, Motor, Base Connector + Shaft V2:1]
-  Elbow_Connector_Passive:
-    assembly: 6DOF_URDF
-    mass_kg: 3.223631
-    volume_m3: 0.00077875
-    bbox_size_m: [0.226891, 0.179156, 0.122000]
-    com_local_m: [-0.019245, 0.011518, 0.062617]
-    inertia_at_com:
-      ixx: 4.864071e-03
-      ixy: 3.444810e-03
-      ixz: 3.038557e-04
-      iyy: 8.503665e-03
-      iyz: -1.358472e-04
-      izz: 9.997296e-03
-    material: 'Steel'
-    color_rgba: [0.627, 0.627, 0.627, 1.0]
-    body_count: 2
-    is_empty: false
-    collision_source: convex_hull
-    rigid_group: Rigid Group 50
-    is_merged: true
-    merged_from: [Elbow, Elbow, Elbow, HR32906J, HR32906J, HR32906J, HR32906J, Component58:1, Elbow]
-  Roll_Housing:
-    assembly: 6DOF_URDF
-    mass_kg: 0.777648
-    volume_m3: 0.00035705
-    bbox_size_m: [0.164000, 0.065361, 0.113000]
-    com_local_m: [0.041154, -0.253297, -0.010541]
-    inertia_at_com:
-      ixx: 2.292696e-03
-      ixy: 1.323394e-06
-      ixz: -2.147043e-06
-      iyy: 1.753582e-03
-      iyz: -2.028961e-04
-      izz: 8.080313e-04
-    material: 'Steel'
-    color_rgba: [1.000, 1.000, 1.000, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: convex_hull
-    bake_offset_m: [0.041229, -0.283510, -0.047460]
-    mesh_origin_rpy_rad: [-1.570796, 1.570796, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [1.570796, 0.000000, -1.570796]
-    rigid_group: Rigid Group 51
-    is_merged: true
-    merged_from: [Roll, Passive, Motor, HR32906J, HR32906J, HR32906J, HR32906J, Component64:1]
-  UA_Motor:
-    assembly: 6DOF_URDF
-    mass_kg: 1.315683
-    volume_m3: 0.00086118
-    bbox_size_m: [0.161362, 0.266901, 0.266162]
-    com_local_m: [-0.081949, -0.130878, 0.071799]
-    inertia_at_com:
-      ixx: 5.586235e-03
-      ixy: -2.437625e-03
-      ixz: 1.020418e-04
-      iyy: 4.787916e-03
-      iyz: 1.483998e-04
-      izz: 5.396456e-03
-    material: 'Steel'
-    color_rgba: [1.000, 1.000, 1.000, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: convex_hull
-    bake_offset_m: [-0.077066, -0.122959, 0.060400]
-    mesh_origin_rpy_rad: [-3.141593, 0.000000, 2.443461]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [-3.141593, 0.000000, 2.443461]
-    rigid_group: Rigid Group 49
-    is_merged: true
-    merged_from: [92605A009:1, Connector:1, 92605A009:2, Upper, EG17, nema17input, input, ¦µ10circlip, M3hexagon, 6801, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, UA, HR32906J, HR32906J, HR32906J, HR32906J, 92605A009, Connector, 92605A009, Component52:1, Component54:1]
-  base_link:
-    assembly: 6DOF_URDF
-    mass_kg: 0.601590
-    volume_m3: 0.00107925
-    bbox_size_m: [0.175000, 0.175000, 0.076000]
-    com_local_m: [-0.000000, 0.000000, -0.031604]
-    inertia_at_com:
-      ixx: 8.670932e-04
+      ixx: 1.935595e-06
       ixy: 0.000000e+00
       ixz: 0.000000e+00
-      iyy: 8.670932e-04
+      iyy: 1.935595e-06
       iyz: 0.000000e+00
-      izz: 1.232945e-03
+      izz: 1.864791e-06
+    body_count: 0
+    is_empty: false
+    collision_source: convex_hull
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [0.000000, 0.000000, -0.607892]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [0.000000, 0.000000, 0.607892]
+    rigid_group: Gripper
+    is_merged: true
+    merged_from: [frame_gripper:1, Gripper]
+  Roll:
+    assembly: 6DOF_URDF
+    mass_kg: 0.682370
+    volume_m3: 0.00035706
+    bbox_size_m: [0.068564, 0.114503, 0.164000]
+    com_local_m: [-0.001708, -0.009290, 0.127780]
+    inertia_at_com:
+      ixx: 1.825964e-03
+      ixy: -6.698787e-05
+      ixz: -2.868309e-05
+      iyy: 1.445666e-03
+      iyz: -1.542829e-04
+      izz: 6.361788e-04
+    body_count: 0
+    is_empty: false
+    collision_source: convex_hull
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [3.141593, 0.000000, -0.214197]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [-3.141593, 0.000000, -0.214197]
+    rigid_group: Roll
+    is_merged: true
+    merged_from: [Motor, Roll, Passive, HR32906J, HR32906J, HR32906J, HR32906J, Component64:1, frame_roll:1]
+  Shoulder:
+    assembly: 6DOF_URDF
+    mass_kg: 2.094136
+    volume_m3: 0.00123656
+    bbox_size_m: [0.160000, 0.323150, 0.151050]
+    com_local_m: [-0.000095, -0.008184, 0.098482]
+    inertia_at_com:
+      ixx: 2.587229e-02
+      ixy: 5.786696e-03
+      ixz: 7.038970e-04
+      iyy: 4.623819e-03
+      iyz: -1.651409e-03
+      izz: 2.818176e-02
+    body_count: 0
+    is_empty: false
+    collision_source: convex_hull
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [0.000000, 0.000000, 0.086342]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [0.000000, 0.000000, -0.086342]
+    rigid_group: Shoulder
+    is_merged: true
+    merged_from: [Base Connector + Shaft V2:1, Motor, Bearing, Shoulder, Shoulder, Shoulder, Shoulder, Base, EG17, nema17input, input, ¦µ10circlip:1, M3hexagon, 6801:1, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, Shoulder, frame_shoulder:1]
+  UA:
+    assembly: 6DOF_URDF
+    mass_kg: 1.236306
+    volume_m3: 0.00088796
+    bbox_size_m: [0.161362, 0.266901, 0.266162]
+    com_local_m: [0.070469, 0.078205, -0.113480]
+    inertia_at_com:
+      ixx: 4.958228e-03
+      ixy: -2.087939e-03
+      ixz: -1.318650e-07
+      iyy: 4.306581e-03
+      iyz: -2.819097e-05
+      izz: 4.648503e-03
+    body_count: 0
+    is_empty: false
+    collision_source: convex_hull
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [0.000000, 0.000000, -0.698132]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [0.000000, 0.000000, 0.698132]
+    rigid_group: UA
+    is_merged: true
+    merged_from: [Upper, Shoulder, 92605A009:1, Connector:1, 92605A009:2, HR32906J, HR32906J, HR32906J, HR32906J, EG17, nema17input, input, ¦µ10circlip, M3hexagon, 6801, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, M3hexagon, UA, 92605A009, Connector, 92605A009, Component54:1, frame_ua:1, Elbow, Component52:1]
+  Yaw:
+    assembly: 6DOF_URDF
+    mass_kg: 0.259842
+    volume_m3: 0.00012240
+    bbox_size_m: [0.087637, 0.093191, 0.055000]
+    com_local_m: [-0.015546, -0.012336, 0.050500]
+    inertia_at_com:
+      ixx: 1.293116e-04
+      ixy: -3.743600e-05
+      ixz: -3.755642e-12
+      iyy: 1.422665e-04
+      iyz: 1.808699e-10
+      izz: 1.729664e-04
+    body_count: 0
+    is_empty: false
+    collision_source: convex_hull
+    bake_offset_m: [0.000000, 0.000000, 0.000000]
+    mesh_origin_rpy_rad: [-3.141593, 0.000000, -0.412197]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [3.141593, 0.000000, -0.412197]
+    rigid_group: Yaw
+    is_merged: true
+    merged_from: [frame_yaw:1, Yaw, HR32906J, HR32906J, Motor]
+  base_link:
+    assembly: 6DOF_URDF
+    mass_kg: 0.596687
+    volume_m3: 0.00107325
+    bbox_size_m: [0.175000, 0.175000, 0.071000]
+    com_local_m: [0.000000, 0.000000, -0.031884]
+    inertia_at_com:
+      ixx: 8.608796e-04
+      ixy: 0.000000e+00
+      ixz: 0.000000e+00
+      iyy: 8.608778e-04
+      iyz: 0.000000e+00
+      izz: 1.231935e-03
     material: 'PETG_15_Gyroid'
     color_rgba: [0.098, 0.098, 0.098, 1.0]
     body_count: 1
@@ -184,17 +201,31 @@ links:
     collision_source: convex_hull
     frame_rule: auto
     frame_rebase_rpy_rad: [0.000000, 0.000000, 0.000000]
-    rigid_group: Rigid Group 47
+    rigid_group: Base
     is_merged: true
-    merged_from: [Base, Shoulder, Shoulder, Lower, Lower, Shoulder]
+    merged_from: [base_link:1, Shoulder, Shoulder, Lower, Lower]
 
 joints:
   Revolute_13:
     type: revolute
-    parent: Base_Motor
-    child: UA_Motor
-    origin_xyz_m: [0.076040, -0.153400, -0.055062]
-    origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
+    parent: Shoulder
+    child: UA
+    origin_xyz_m: [-0.007100, -0.149900, 0.111900]
+    origin_rpy_rad: [1.570796, 0.000000, 0.086342]
+    axis: [0.0000, 0.0000, 1.0000]
+    is_mount: false
+    passive: false
+    limits:
+      lower: 0.000000
+      upper: 6.283185
+      effort: 100.0
+      velocity: 1.00
+  Revolute_29:
+    type: revolute
+    parent: UA
+    child: Elbow
+    origin_xyz_m: [0.133252, 0.154914, -0.036000]
+    origin_rpy_rad: [0.000000, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: false
     passive: false
@@ -205,10 +236,10 @@ joints:
       velocity: 1.00
   Revolute_37:
     type: revolute
-    parent: Elbow_Connector_Passive
-    child: Roll_Housing
-    origin_xyz_m: [0.106612, 0.079606, -0.186510]
-    origin_rpy_rad: [-1.570796, 0.000000, -0.610865]
+    parent: Elbow
+    child: Roll
+    origin_xyz_m: [-0.015463, 0.083655, -0.071500]
+    origin_rpy_rad: [1.570796, -0.214197, -1.161568]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: false
     passive: false
@@ -219,10 +250,10 @@ joints:
       velocity: 1.00
   Revolute_43:
     type: revolute
-    parent: Roll_Housing
-    child: 20mm
-    origin_xyz_m: [0.251183, -0.314427, 0.170791]
-    origin_rpy_rad: [1.570796, -1.308997, 0.000000]
+    parent: Roll
+    child: Yaw
+    origin_xyz_m: [0.008683, 0.049748, 0.186000]
+    origin_rpy_rad: [1.570796, 1.158599, -0.289463]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: false
     passive: false
@@ -231,11 +262,20 @@ joints:
       upper: 6.283185
       effort: 100.0
       velocity: 1.00
+  Revolute_46:
+    type: continuous
+    parent: Yaw
+    child: Gripper
+    origin_xyz_m: [-0.055454, -0.045134, 0.050500]
+    origin_rpy_rad: [1.570796, 0.110328, -0.887634]
+    axis: [0.0000, 0.0000, 1.0000]
+    is_mount: false
+    passive: false
   Revolute_5:
     type: revolute
     parent: base_link
-    child: Base_Motor
-    origin_xyz_m: [-0.048850, 0.117229, 0.068000]
+    child: Shoulder
+    origin_xyz_m: [0.000000, 0.000000, -0.051500]
     origin_rpy_rad: [0.000000, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: false
@@ -245,23 +285,30 @@ joints:
       upper: 6.283185
       effort: 100.0
       velocity: 1.00
-  Rigid_25:
-    type: fixed
-    parent: UA_Motor
-    child: Elbow_Connector_Passive
-    origin_xyz_m: [-0.140442, -0.202376, 0.018900]
-    origin_rpy_rad: [0.000000, 0.000000, -0.698132]
-    axis: [0.0000, 0.0000, 1.0000]
-    is_mount: false
-    passive: false
 
 closing_joints:
-  - name: Rigid_14
+  - name: Rigid_55
     source: auto_detected
     type: fixed
-    parent: UA_Motor
-    child: Base_Motor
-    origin_xyz_m: [-0.076040, -0.054462, 0.153400]
-    origin_rpy_rad: [1.570796, 0.000000, 0.000000]
+    parent: UA
+    child: Elbow
+    origin_xyz_m: [0.133252, 0.154914, -0.036000]
+    origin_rpy_rad: [0.000000, 0.000000, 0.000000]
+    axis: [0.0000, 0.0000, 1.0000]
+  - name: Rigid_56
+    source: auto_detected
+    type: fixed
+    parent: Elbow
+    child: Roll
+    origin_xyz_m: [-0.015463, 0.083655, -0.071500]
+    origin_rpy_rad: [1.570796, -0.214197, -1.161568]
+    axis: [0.0000, 0.0000, 1.0000]
+  - name: Rigid_57
+    source: auto_detected
+    type: fixed
+    parent: Roll
+    child: Yaw
+    origin_xyz_m: [0.008683, 0.049748, 0.186000]
+    origin_rpy_rad: [1.570796, 1.158599, -0.289463]
     axis: [0.0000, 0.0000, 1.0000]
 
